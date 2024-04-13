@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "img_url":"https://i.ibb.co/dgv4h9Y/id1.jpg",
+      "estate_title": "Luxury Penthouse with Ocean View",
+      "segment_name": "Penthouse",
+      "description": "Indulge in the epitome of urban luxury living with this stunning penthouse boasting unparalleled views of the sparkling ocean. Situated in the heart of Miami Beach, this expansive residence spans three floors and features floor-to-ceiling windows that bathe the interiors in natural light while offering panoramic vistas of the Atlantic coastline. The main level welcomes you with a grand foyer leading to a spacious living area, perfect for entertaining guests or relaxing in style. A gourmet kitchen equipped with state-of-the-art appliances and custom cabinetry awaits the culinary enthusiast. Retreat to the master suite, occupying the entire top floor, complete with a private terrace, lavish en-suite bathroom, and his-and-hers walk-in closets. Additional amenities include a private elevator, home theater, and a rooftop infinity pool overlooking the ocean. This penthouse epitomizes luxury living at its finest, offering the ultimate blend of sophistication, comfort, and unparalleled views.",
+      "price": 5000000,
+      "status": "sale",
+      "area": 3000,
+      "location": "Miami Beach, Florida",
+      "facilities": ["Spacious living room", "Private terrace", "Infinity pool", "Gourmet kitchen", "Home theater", "Private elevator"]
+    },
+    {
+      "id": 2,
+      "img_url":"https://i.ibb.co/KjJqw20/id2.jpg",
+      "estate_title": "Exquisite Beachfront Villa",
+      "segment_name": "Villa",
+      "description": "Embrace the coastal lifestyle with this exquisite beachfront villa nestled along the pristine shores of Malibu. Designed for luxurious living and entertaining, this palatial residence boasts an unparalleled blend of elegance and comfort. The grand entrance foyer welcomes you with soaring ceilings and a sweeping staircase, leading to the expansive living areas adorned with high-end finishes and panoramic ocean views. The gourmet kitchen is a chef's dream, featuring top-of-the-line appliances, a center island, and a breakfast nook overlooking the azure waters. Retreat to the master suite, where a private balcony offers a front-row seat to spectacular sunsets over the Pacific. Outdoor amenities abound, including a resort-style infinity pool, expansive sundeck, and lush gardens leading to your own private beach access. Whether you're hosting lavish soirées or seeking solace by the sea, this beachfront villa offers the ultimate in luxury coastal living.",
+      "price": 8000000,
+      "status": "sale",
+      "area": 5000,
+      "location": "Malibu, California",
+      "facilities": ["Private beach access", "Infinity pool", "Gourmet kitchen", "Master suite with balcony", "Lush gardens"]
+    },
+    {
+      "id": 3,
+      "img_url":"https://i.ibb.co/Wx3vs5Q/id3.jpg",
+      "estate_title": "Exclusive Private Island Retreat",
+      "segment_name": "Private Island",
+      "description": "Escape to your own private paradise with this exclusive island retreat set amidst the turquoise waters of the Caribbean. Accessed only by private boat or helicopter, this secluded oasis offers the ultimate in luxury and privacy for the discerning buyer. The main residence, a sprawling villa perched atop a hill, boasts panoramic views of the surrounding seascape and features spacious living areas, elegant furnishings, and state-of-the-art amenities. Step outside to discover a world of outdoor entertainment, including a waterfront infinity pool, sun-drenched sundeck, and alfresco dining pavilion overlooking the crystal-clear waters. Explore the island's natural beauty with winding walking trails, secluded beaches, and lush tropical gardens teeming with exotic flora and fauna. Whether you're seeking a tranquil retreat or an exclusive entertainment venue, this private island offers a rare opportunity to own a slice of Caribbean paradise.",
+      "price": 15000000,
+      "status": "sale",
+      "area": 10000,
+      "location": "Caribbean Sea",
+      "facilities": ["Waterfront infinity pool", "Alfresco dining pavilion", "Helipad", "Secluded beaches", "Tropical gardens"]
+    },
+    {
+      "id": 4,
+      "img_url":"https://i.ibb.co/MPLpY86/id4.jpg",
+      "estate_title": "Magnificent Oceanfront Mansion",
+      "segment_name": "Mansion",
+      "description": "Experience the epitome of coastal luxury with this magnificent oceanfront mansion situated in the prestigious enclave of the Hamptons. Set amidst manicured grounds and commanding sweeping views of the Atlantic, this palatial residence exudes sophistication and grandeur at every turn. The grand foyer sets the tone for opulent living, with its soaring ceilings, marble floors, and sweeping staircase. Entertain guests in the formal living and dining rooms, or unwind in the cozy family room with a fireplace and panoramic ocean views. The gourmet kitchen is a chef's delight, featuring top-of-the-line appliances, custom cabinetry, and a spacious island for casual dining. Retreat to the sumptuous master suite, complete with a private balcony, dual walk-in closets, and a spa-like en-suite bathroom. Outdoor amenities include a sparkling pool, expansive terrace, and direct access to the sandy shores below. With its unparalleled beauty and timeless elegance, this oceanfront mansion offers a lifestyle of luxury and refinement for the most discerning buyer.",
+      "price": 10000000,
+      "status": "sale",
+      "area": 8000,
+      "location": "Hamptons, New York",
+      "facilities": ["Formal living and dining rooms", "Gourmet kitchen", "Master suite with balcony", "Pool and terrace", "Direct beach access"]
+    },
+    {
+      "id": 5,
+      "img_url":"https://i.ibb.co/rtyXDkX/id5.jpg",
+      "estate_title": "Luxury Resort & Spa",
+      "segment_name": "Resort",
+      "description": "Indulge in unparalleled luxury and relaxation at this exclusive resort and spa nestled on the idyllic shores of Bora Bora. Surrounded by crystal-clear waters and lush tropical landscapes, this world-class retreat offers a sanctuary for the mind, body, and soul. The resort features elegantly appointed villas and suites, each offering breathtaking views and luxurious amenities. Immerse yourself in tranquility at the spa, where a range of holistic treatments and therapies await. Take a dip in the infinity pool overlooking the lagoon, or savor gourmet cuisine at one of the resort's exquisite restaurants. For the adventurous at heart, a variety of water sports and island excursions are available, allowing you to explore the natural beauty of Bora Bora. Whether you're seeking a romantic getaway or a rejuvenating escape, this luxury resort offers an unforgettable experience in paradise.",
+      "price": 20000000,
+      "status": "sale",
+      "area": 15000,
+      "location": "Bora Bora, French Polynesia",
+      "facilities": ["Spa & wellness center", "Infinity pool", "Gourmet restaurants", "Water sports", "Island excursions"]
+    },
+    {
+      "id": 6,
+      "img_url":"https://i.ibb.co/zPJ0b95/id6.jpg",
+      "estate_title": "Spectacular Cliffside Villa",
+      "segment_name": "Villa",
+      "description": "Perched high atop the dramatic cliffs of Santorini, this spectacular villa offers breathtaking views of the Aegean Sea and the iconic caldera. Designed to blend seamlessly with its natural surroundings, this architectural masterpiece boasts sleek lines, minimalist interiors, and expansive outdoor living spaces. The main living area features floor-to-ceiling windows that frame panoramic vistas of the azure waters below, while sliding glass doors open onto a spacious terrace with a private infinity pool. The gourmet kitchen is equipped with modern appliances and a central island for casual dining, making it ideal for entertaining guests. Retreat to the master suite, where a luxurious en-suite bathroom and a private balcony await, offering uninterrupted views of the sunset over the sea. Whether you're lounging by the pool, dining alfresco on the terrace, or exploring the island's charming villages, this cliffside villa offers a serene retreat in one of the world's most picturesque settings.",
+      "price": 7000000,
+      "status": "sale",
+      "area": 4000,
+      "location": "Santorini, Greece",
+      "facilities": ["Private infinity pool", "Spacious terrace", "Gourmet kitchen", "Master suite with balcony"]
+    }
+  ]
+  
