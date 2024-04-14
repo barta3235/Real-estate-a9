@@ -5,7 +5,12 @@ import { Outlet } from "react-router-dom";
 const Root = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <div>
+               <Navbar></Navbar>
+            </div>
+            <div className="h-[100px]">
+
+            </div>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>
