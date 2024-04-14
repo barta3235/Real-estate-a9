@@ -17,7 +17,7 @@ const Footer = () => {
 
             <hr className="mb-[35px] md:mb-0 w-3/4 mx-auto flex md:hidden" />
 
-            <div className="md:pl-[40px] border-l-2">
+            <div className="md:pl-[40px] md:border-l-2">
                  <h1 className="text-[25px] text-white font-semibold mb-[10px]">Connect with us</h1>
                  <button className="text-white text-[20px] flex items-center gap-2 mb-[8px] p-1 hover:bg-red-900 rounded-xl"><FaFacebook></FaFacebook>Facebook</button>
                  <button className="text-white text-[20px] flex items-center gap-2 mb-[8px] p-1 hover:bg-red-900 rounded-xl"><FaTwitter></FaTwitter>Twitter</button>

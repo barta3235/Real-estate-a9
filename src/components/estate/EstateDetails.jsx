@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { GiHouse } from "react-icons/gi";
 
-
 const EstateDetails = ({estate}) => {
 
     const {description,img_url,estate_title,segment_name,status,area,id}=estate;
 
     return (
         <div className="font-medium border p-[20px] rounded-xl">
-            <img className="w-full h-[300px]" src={img_url} alt="" />
+            <img className="w-full h-[300px] rounded-xl" src={img_url} alt="" />
             <h1 className="flex items-center gap-2 text-[20px] my-[10px]"><GiHouse></GiHouse><strong>{estate_title}</strong> </h1>
             <h1 className="my-[10px] text-[20px]"><strong>Segment:</strong> {segment_name}</h1>
             <h1 className="my-[20px] font-normal text-justify">{description.slice(0,200)}   .....</h1>

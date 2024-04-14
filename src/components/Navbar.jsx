@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaHouseCrack } from "react-icons/fa6";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const img="https://i.ibb.co/X7K2KK0/sss.jpg";
 
 const Navbar = () => {
 
@@ -9,6 +15,18 @@ const Navbar = () => {
         <NavLink to='/updateProfile' className={({isActive})=> isActive? 'text-[19px] mr-5 font-semibold border border-red-700 text-red-700 rounded-2xl p-3': 'text-[19px] mr-5 font-semibold rounded-2xl p-3'}>Update Profile</NavLink>
         <NavLink to='/userProfile' className={({isActive})=> isActive? 'text-[19px] font-semibold border border-red-700 text-red-700 rounded-2xl p-3': 'text-[19px] font-semibold rounded-2xl p-3'}>User Profile</NavLink>
     </div>
+
+    const {user,logOut}=useContext(AuthContext);
+
+    const handleSignOut=()=>{
+        logOut()
+        .then((result)=>{
+             console.log(result.user);
+        })
+        .catch((error)=>{
+             console.log(error.message);
+        })
+    }
 
 
     return (
@@ -36,11 +54,17 @@ const Navbar = () => {
             <div className="navbar-end">
                 <div className="avatar">
                     <div className="w-[49px] rounded-full mr-2">
-                        <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        {
+                            user ? <img src={user.photoURL} /> : <img src={img} />
+                        }
                     </div>
                 </div>
-                <a className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white">Login</a>
+                {
+                    user ? <Link onClick={handleSignOut} className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white">LogOut</Link>
+                    : <Link to='/login' className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white">Login</Link>
+                }
             </div>
+            <ToastContainer />
         </div>
     );
 };
