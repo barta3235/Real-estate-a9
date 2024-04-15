@@ -13,8 +13,8 @@ const UserProfile = () => {
                  <title>South Stay | Home</title>
             </Helmet>
             <div className="hero-content flex-col md:flex-row p-0">
-                <img src={photoURL} className="md:w-[300px] rounded-full shadow-2xl mb-[20px] md:mb-[20px]" />
-                <form className="md:ml-[30px]">
+                <img src={photoURL} className="animate__zoomInUp animate__animated md:w-[300px] rounded-full shadow-2xl mb-[20px] md:mb-[20px]" />
+                <form className="md:ml-[30px] animate__zoomInDown animate__animated">
                     <h1 className="text-3xl md:text-5xl font-bold ">Hello, <span className="text-red-700">{displayName}</span></h1>
                     <p className="text-[20px] font-medium mb-7"></p>
                     <div className="border p-2 rounded-xl bg-gradient-to-r from-red-800 to-red-500 text-white">

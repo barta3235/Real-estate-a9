@@ -1,6 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { GiHouse } from "react-icons/gi";
 import { Helmet } from "react-helmet-async";
+import 'animate.css'
+
 const MoreOnEstate = () => {
 
     const { id } = useParams();
@@ -17,11 +19,11 @@ const MoreOnEstate = () => {
             <Helmet>
                  <title>South Stay | Details</title>
             </Helmet>
-            <div className="col-span-2">
+            <div className="col-span-2 animate__slideInUp animate__animated">
                 <img className="rounded-xl w-full h-full" src={img_url} alt="" />
             </div>
 
-            <div className="col-span-2">
+            <div className="col-span-2 animate__slideInDown animate__animated">
                 <h1 className="flex items-center gap-2 text-[25px] my-[10px] bg-red-700 py-[5px] text-white rounded-xl pl-1"><GiHouse></GiHouse><strong>{estate_title}</strong> </h1>
                 <h1 className="my-[10px] text-[24px]"><strong>Segment:</strong> {segment_name}</h1>
                 <h1 className="my-[22px] font-normal text-justify">{description}</h1>
@@ -38,7 +40,7 @@ const MoreOnEstate = () => {
                     <h1><strong>For: </strong> {status}</h1>
                     <h1><strong>Area: </strong> {area} sq/ft</h1>
                 </div>
-                <h1 className="my-[15px] font-medium text-[22px] text-red-800"><strong>Price:</strong> ${price} </h1>
+                <h1 className="my-[15px] font-medium text-[22px] text-red-800 animate__bounceIn animate__animated"><strong>Price:</strong> ${price} </h1>
                 <h1 className="my-[15px] text-[22px]"><strong>Location:</strong> {location} </h1>
               
 

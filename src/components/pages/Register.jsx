@@ -60,11 +60,11 @@ const Register = () => {
                  <title>South Stay | Sign Up</title>
             </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
+                <div className="text-center lg:text-left animate__animated animate__fadeInRightBig">
                     <h1 className="text-5xl font-bold text-red-800">Register yourself!</h1>
                     <p className="py-6 text-[18px] font-medium">Be a part of South Stay family. Your convenience is our concern</p>
                 </div>
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 animate__animated animate__fadeInLeftBig">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body p-3 md:p-[32px]">
                         
                         <div className="form-control">

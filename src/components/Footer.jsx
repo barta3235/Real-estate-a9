@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaHouseCrack } from "react-icons/fa6";
 import { FaFacebook, FaInstagram,FaTwitter } from "react-icons/fa";
-
+import 'animate.css'
 const Footer = () => {
     return (
         <div className="py-[120px] bg-red-800 flex flex-col md:flex-row justify-center px-[5px]">

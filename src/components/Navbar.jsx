@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'animate.css'
 
 const img="https://i.ibb.co/X7K2KK0/sss.jpg";
 
@@ -47,7 +48,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a href="/" className="text-3xl font-bold text-red-700 flex items-center gap-2">South Stay<FaHouseCrack className="hidden md:flex"></FaHouseCrack></a>
+                <a href="/" className="animate__bounce animate__animated text-3xl font-bold text-red-700 flex items-center gap-2">South Stay<FaHouseCrack className="hidden md:flex"></FaHouseCrack></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -63,8 +64,8 @@ const Navbar = () => {
                     </div>
                 </div>
                 {
-                    user ? <Link onClick={handleSignOut} className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white">Logout</Link>
-                    : <Link to='/login' className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white">Login</Link>
+                    user ? <Link onClick={handleSignOut} className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white animate__animated animate__bounceIn">Logout</Link>
+                    : <Link to='/login' className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white animate__animated animate__bounceIn">Login</Link>
                 }
             </div>
             <ToastContainer />
