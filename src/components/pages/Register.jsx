@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -52,6 +53,9 @@ const Register = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                 <title>South Stay | Sign Up</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold text-red-800">Register yourself!</h1>

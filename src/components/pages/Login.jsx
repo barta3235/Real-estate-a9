@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AuthContext } from "../../provider/AuthProvider";
+import { AuthContext, provider } from "../../provider/AuthProvider";
 import { useForm } from "react-hook-form"
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
@@ -7,9 +7,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { FaGoogle } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
-    const {signInUser}=useContext(AuthContext);
+    const {signInUser,googleAuth,githubLogin}=useContext(AuthContext);
     const [seePassword,setSeePassword]=useState(false)
 
     const {
@@ -30,9 +33,32 @@ const Login = () => {
         })
     }
 
+    const handleGoogleSignIn=()=>{
+        googleAuth()
+        .then((result)=>{
+            console.log(result.user);
+        })
+        .catch((error)=>{
+            console.log(error.message);
+        })
+    }
+
+    const handleGithub=()=>{
+         githubLogin()
+         .then((result)=>{
+            console.log(result.user);
+        })
+        .catch((error)=>{
+            console.log(error.message);
+        })
+    }
+
 
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                 <title>South Stay | Login</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold text-red-800">Log In!</h1>
@@ -73,6 +99,14 @@ const Login = () => {
                             <button className="btn bg-red-700 text-white hover:bg-red-900">Login</button>
                         </div>
                     </form>
+                                       
+                    <div className="flex items-center justify-end gap-3 flex-row mb-4 md:mb-0">
+                        <h1 className="font-semibold text-[16px] ml-2">Continue with</h1>
+                        <button onClick={handleGoogleSignIn} className="flex items-center gap-[8px] btn md:my-3 md:ml-1"><h1 className="hidden md:flex">Google</h1> <FaGoogle className="text-[18px] text-red-800"></FaGoogle></button>
+                        <button onClick={handleGithub} className="flex items-center gap-[8px] btn md:my-3 md:mr-3"><h1 className="hidden md:flex">Github</h1> <FaGithub className="text-black text-[18px]"></FaGithub></button>
+                    </div>
+
+
                 </div>
     
             </div>

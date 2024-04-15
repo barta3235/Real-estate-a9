@@ -8,12 +8,15 @@ import Login from "../components/pages/Login";
 import Register from "../components/pages/Register";
 import UserProfile from "../components/pages/UserProfile";
 import UpdateProfile from "../components/pages/UpdateProfile";
+import ErrorPage from "../components/pages/ErrorPage";
+import Estates from "../components/estate/Estates";
 
 
 const Router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
         {
             path:'/',
@@ -39,7 +42,7 @@ const Router = createBrowserRouter([
         {
           path: '/updateprofile',
           element:<UpdateProfile></UpdateProfile>
-        }
+        },
     ]
   },
 ]);

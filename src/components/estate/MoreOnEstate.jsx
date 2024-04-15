@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { GiHouse } from "react-icons/gi";
-
+import { Helmet } from "react-helmet-async";
 const MoreOnEstate = () => {
 
     const { id } = useParams();
@@ -14,6 +14,9 @@ const MoreOnEstate = () => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mb-[40px] mx-[5px] md:mx-[6px]">
+            <Helmet>
+                 <title>South Stay | Details</title>
+            </Helmet>
             <div className="col-span-2">
                 <img className="rounded-xl w-full h-full" src={img_url} alt="" />
             </div>

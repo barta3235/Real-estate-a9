@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from "react-hook-form"
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
-
+import { Helmet } from 'react-helmet-async';
 
 const UpdateProfile = () => {
 
@@ -33,6 +33,9 @@ const UpdateProfile = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                 <title>South Stay | Update Profile</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold text-red-800">Update your information!</h1>
