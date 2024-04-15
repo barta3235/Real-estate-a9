@@ -8,7 +8,6 @@ import { AuthContext } from '../../provider/AuthProvider';
 const UpdateProfile = () => {
 
     const {user,reworkProfile}=useContext(AuthContext);
-    const [refresh,setRefresh]=useState(false);
 
     const {
         register,

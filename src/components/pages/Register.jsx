@@ -1,12 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useForm } from "react-hook-form"
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaEyeSlash } from "react-icons/fa";
+import { IoEye } from "react-icons/io5";
 
 const Register = () => {
 
+    const [seePassword,setSeePassword]=useState(false)
     const { createUser,reworkProfile } = useContext(AuthContext);
 
     const {
@@ -32,16 +35,17 @@ const Register = () => {
               
             reworkProfile(name,photoUrl)
             .then((result)=>{
+                toast('You have successfully registered!');
                 console.log(result.user)
             })
             .catch((error)=>{
                 console.log(error.message);
             })
-            // toast('You have successfully registered!');
+            
         })
         .catch((error)=>{
+            toast(`${error.message}`);
             console.log(error.message)
-            // toast(`${error.message}`);
         })
     }
 
@@ -86,13 +90,17 @@ const Register = () => {
                             {errors.photoUrl && <span className="text-red-700 font-medium">*This field is required</span>}
                         </div>
 
-                        <div className="form-control">
+                        <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text font-medium">Password</span>
+                                
                             </label>
-                            <input type="password" placeholder="password" className="input input-bordered" 
+                            <input
+                             type={seePassword? 'text':'password'} 
+                             placeholder="password" 
+                             className="input input-bordered" 
                             {...register("password", { required: true })}
-                            /> 
+                            ></input><span onClick={()=> setSeePassword(!seePassword)} className="absolute right-4 bottom-4">{seePassword ? <IoEye></IoEye> : <FaEyeSlash></FaEyeSlash> }</span> 
                             {errors.password && <span className="text-red-700 font-medium">*This field is required</span>}
                         </div>
 

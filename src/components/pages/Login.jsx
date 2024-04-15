@@ -4,9 +4,13 @@ import { useForm } from "react-hook-form"
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaEyeSlash } from "react-icons/fa";
+import { IoEye } from "react-icons/io5";
+import { useState } from "react";
 
 const Login = () => {
     const {signInUser}=useContext(AuthContext);
+    const [seePassword,setSeePassword]=useState(false)
 
     const {
         register,
@@ -48,18 +52,21 @@ const Login = () => {
                             {errors.email && <span className="text-red-700 font-medium">*This field is required</span>}
                         </div>
 
-                        <div className="form-control">
+                        <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text font-medium">Password</span>
                             </label>
-                            <input type="password" placeholder="password" className="input input-bordered" 
+                            <input 
+                            type={seePassword? 'text':'password'}  
+                            placeholder="password" 
+                            className="input input-bordered" 
                             {...register("password", { required: true })}
-                            /> 
+                            ></input><span onClick={()=> setSeePassword(!seePassword)} className="absolute right-4 bottom-4">{seePassword ? <IoEye></IoEye> : <FaEyeSlash></FaEyeSlash> }</span> 
                             {errors.password && <span className="text-red-700 font-medium">*This field is required</span>}
                         </div>
 
                         <div>
-                            <Link className="font-semibold" to='/login'>Yet, not registered? <span className="text-red-700">Sign Up here!</span></Link>
+                            <Link className="font-semibold" to='/register'>Yet, not registered? <span className="text-red-700">Sign Up here!</span></Link>
                         </div>
 
                         <div className="form-control mt-6">
