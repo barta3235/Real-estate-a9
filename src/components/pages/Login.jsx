@@ -11,6 +11,9 @@ import { Helmet } from "react-helmet-async";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import 'animate.css';
+import wave from '../../assets/images/wave1.svg'
+
+
 
 const Login = () => {
     const {signInUser,googleAuth,githubLogin}=useContext(AuthContext);
@@ -65,7 +68,7 @@ const Login = () => {
 
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-slate-500" style={{backgroundImage: `url(${wave})`}} >
             <Helmet>
                  <title>South Stay | Login</title>
             </Helmet>

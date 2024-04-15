@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
-
+import wave from '../../assets/images/wave2.svg'
 const UserProfile = () => {
 
     const {user}=useContext(AuthContext);
     const {displayName,email,photoURL}=user
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(${wave})`}}>
             <Helmet>
                  <title>South Stay | Home</title>
             </Helmet>

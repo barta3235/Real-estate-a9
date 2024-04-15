@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form"
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
-
+import wave2 from '../../assets/images/wave2.svg'
 
 const UpdateProfile = () => {
 
@@ -33,7 +33,7 @@ const UpdateProfile = () => {
         
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(${wave2})`}}>
             <Helmet>
                  <title>South Stay | Update Profile</title>
             </Helmet>
