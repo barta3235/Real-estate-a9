@@ -53,10 +53,10 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     {navlinks}
                 </ul>
-            </div>
+            </div>  
             <div className="navbar-end">
-                <div className="avatar">
-                    <div className=" w-[49px] rounded-full mr-2">
+                <div className="avatar tooltip tooltip-bottom" data-tip={user? user.displayName : 'No user'}>
+                    <div className="w-[49px] rounded-full mr-2">
                         {
                             user ? <img src={user.photoURL} /> : <img src={img} />
                         }

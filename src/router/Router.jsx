@@ -9,7 +9,7 @@ import Register from "../components/pages/Register";
 import UserProfile from "../components/pages/UserProfile";
 import UpdateProfile from "../components/pages/UpdateProfile";
 import ErrorPage from "../components/pages/ErrorPage";
-import Estates from "../components/estate/Estates";
+import PrivateRoute from "./PrivateRoute";
 
 
 const Router = createBrowserRouter([
@@ -24,8 +24,10 @@ const Router = createBrowserRouter([
         },
         {
             path:'/moreOnEstate/:id',
-            element: <MoreOnEstate></MoreOnEstate>,
-            loader:()=> fetch('RealEstate.JSON')
+            element:<PrivateRoute>
+              <MoreOnEstate></MoreOnEstate>
+            </PrivateRoute>,
+            loader:()=> fetch('/RealEstate.JSON')
         },
         {
           path: '/login',
@@ -37,11 +39,11 @@ const Router = createBrowserRouter([
         },
         {
           path:'/userprofile',
-          element: <UserProfile></UserProfile>
+          element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
         },
         {
           path: '/updateprofile',
-          element:<UpdateProfile></UpdateProfile>
+          element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
         },
     ]
   },

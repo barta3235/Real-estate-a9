@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import EstateDetails from "./EstateDetails";
+import 'animate.css'
 
 const Estates = () => {
     const [estate,setEstate]=useState([]);

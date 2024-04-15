@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext, provider } from "../../provider/AuthProvider";
 import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash } from "react-icons/fa";
@@ -10,10 +10,15 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import 'animate.css';
 
 const Login = () => {
     const {signInUser,googleAuth,githubLogin}=useContext(AuthContext);
-    const [seePassword,setSeePassword]=useState(false)
+    const [seePassword,setSeePassword]=useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    console.log(location)
 
     const {
         register,
@@ -27,26 +32,31 @@ const Login = () => {
         signInUser(email,password)
         .then((result)=>{
             console.log(result.user);
+            navigate(location.state ? location.state : '/')
         })
         .catch((error)=>{
             console.log(error.message);
         })
     }
 
-    const handleGoogleSignIn=()=>{
+    const handleGoogleSignIn=(e)=>{
+        e.preventDefault()
         googleAuth()
         .then((result)=>{
             console.log(result.user);
+            navigate(location.state ? location.state : '/')
         })
         .catch((error)=>{
             console.log(error.message);
         })
     }
 
-    const handleGithub=()=>{
+    const handleGithub=(e)=>{
+        e.preventDefault();
          githubLogin()
          .then((result)=>{
             console.log(result.user);
+            navigate(location.state ? location.state : '/')
         })
         .catch((error)=>{
             console.log(error.message);
@@ -60,7 +70,7 @@ const Login = () => {
                  <title>South Stay | Login</title>
             </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
+                <div className="text-center lg:text-left ">
                     <h1 className="text-5xl font-bold text-red-800">Log In!</h1>
                     <p className="py-6 text-[18px] font-medium">Now you shall have access to all the marvels of luxury architecture with just a click.</p>
                 </div>
@@ -96,14 +106,14 @@ const Login = () => {
                         </div>
 
                         <div className="form-control mt-6">
-                            <button className="btn bg-red-700 text-white hover:bg-red-900">Login</button>
+                            <button className="animate__headShake btn bg-red-700 text-white hover:bg-red-900">Login</button>
                         </div>
                     </form>
                                        
                     <div className="flex items-center justify-end gap-3 flex-row mb-4 md:mb-0">
                         <h1 className="font-semibold text-[16px] ml-2">Continue with</h1>
-                        <button onClick={handleGoogleSignIn} className="flex items-center gap-[8px] btn md:my-3 md:ml-1"><h1 className="hidden md:flex">Google</h1> <FaGoogle className="text-[18px] text-red-800"></FaGoogle></button>
-                        <button onClick={handleGithub} className="flex items-center gap-[8px] btn md:my-3 md:mr-3"><h1 className="hidden md:flex">Github</h1> <FaGithub className="text-black text-[18px]"></FaGithub></button>
+                        <button onClick={handleGoogleSignIn} className="animate__headShake flex items-center gap-[8px] btn md:my-3 md:ml-1"><h1 className="hidden md:flex">Google</h1> <FaGoogle className="text-[18px] text-red-800"></FaGoogle></button>
+                        <button onClick={handleGithub} className="animate__headShake flex items-center gap-[8px] btn md:my-3 md:mr-3"><h1 className="hidden md:flex">Github</h1> <FaGithub className="text-black text-[18px]"></FaGithub></button>
                     </div>
 
 

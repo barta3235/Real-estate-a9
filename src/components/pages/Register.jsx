@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
+import 'animate.css';
+
 
 const Register = () => {
 
@@ -112,7 +114,7 @@ const Register = () => {
                             <Link className="font-semibold" to='/login'>Already have an account ? <span className="text-red-700">Login here!</span></Link>
                         </div>
 
-                        <div className="form-control mt-6">
+                        <div className="form-control mt-6 animate__headShake">
                             <button className="btn bg-red-700 text-white hover:bg-red-900">Register</button>
                         </div>
                     </form>
