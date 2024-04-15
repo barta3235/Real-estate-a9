@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    const {signInUser}=useContext(AuthContext);
 
     const {
         register,
@@ -15,7 +16,14 @@ const Login = () => {
 
     const onSubmit = (data) => {
         const {email,password}=data;
-        
+         
+        signInUser(email,password)
+        .then((result)=>{
+            console.log(result.user);
+        })
+        .catch((error)=>{
+            console.log(error.message);
+        })
     }
 
 

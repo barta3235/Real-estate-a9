@@ -23,11 +23,13 @@ const MoreOnEstate = () => {
                 <h1 className="my-[10px] text-[24px]"><strong>Segment:</strong> {segment_name}</h1>
                 <h1 className="my-[22px] font-normal text-justify">{description}</h1>
 
-                <hr />
+                <hr className="mb-[10px]" />
+                <div className="flex flex-col text-center md:flex-row">
                 {
-                    facilities.map((item,idx)=> <h1 className="inline mr-6" key={idx}><strong>#{item}</strong></h1>)
+                    facilities.map((item,idx)=> <h1 className="inline mr-6 p-1 bg-red-700 text-white rounded-xl" key={idx}><strong>#{item}</strong></h1>)
                 }
-                <hr />
+                </div>
+                <hr className="mt-[10px]" />
 
                 <div className="mt-[20px] mb-[10px] flex flex-col md:flex-row items-center md:justify-between text-[22px]">
                     <h1><strong>For: </strong> {status}</h1>

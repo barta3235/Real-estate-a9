@@ -42,6 +42,9 @@ const Navbar = () => {
                         <Link className="text-[18px] font-semibold py-[8px] pl-[7px] border-b rounded-lg" to='/register'>Sign Up</Link>
                         <Link className="text-[18px] font-semibold py-[8px] pl-[7px] border-b rounded-lg" to='/userprofile'>User Profile</Link>
                         <Link className="text-[18px] font-semibold py-[8px] pl-[7px] border-b rounded-lg" to='/updateprofile'>Update Profile</Link>
+                        {
+                            user && <Link className="text-[18px] font-semibold py-[8px] pl-[7px] border-b rounded-lg" onClick={handleSignOut}>Logout</Link>
+                        }
                     </ul>
                 </div>
                 <a href="/" className="text-3xl font-bold text-red-700 flex items-center gap-2">South Stay<FaHouseCrack className="hidden md:flex"></FaHouseCrack></a>
@@ -53,14 +56,14 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <div className="avatar">
-                    <div className="w-[49px] rounded-full mr-2">
+                    <div className=" w-[49px] rounded-full mr-2">
                         {
                             user ? <img src={user.photoURL} /> : <img src={img} />
                         }
                     </div>
                 </div>
                 {
-                    user ? <Link onClick={handleSignOut} className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white">LogOut</Link>
+                    user ? <Link onClick={handleSignOut} className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white">Logout</Link>
                     : <Link to='/login' className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white">Login</Link>
                 }
             </div>

@@ -9,7 +9,7 @@
       "status": "Sale",
       "area": 3000,
       "location": "Miami Beach, Florida",
-      "facilities": ["Spacious living room", "Private terrace", "Infinity pool", "Gourmet kitchen", "Home theater", "Private elevator"]
+      "facilities": ["Spacious living room", "Infinity pool", "Home theater"]
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "status": "Rent",
       "area": 5000,
       "location": "Malibu, California",
-      "facilities": ["Private beach access", "Infinity pool", "Gourmet kitchen", "Master suite with balcony", "Lush gardens"]
+      "facilities": ["Private beach access", "Infinity pool", "Lush gardens"]
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "status": "Sale",
       "area": 10000,
       "location": "Caribbean Sea",
-      "facilities": ["Waterfront infinity pool", "Alfresco dining pavilion", "Helipad", "Secluded beaches", "Tropical gardens"]
+      "facilities": ["Waterfront infinity pool", "Alfresco dining pavilion", "Helipad"]
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "status": "Sale",
       "area": 8000,
       "location": "Hamptons, New York",
-      "facilities": ["Formal living and dining rooms", "Gourmet kitchen", "Master suite with balcony", "Pool and terrace", "Direct beach access"]
+      "facilities": ["Formal living and dining rooms", "Pool and terrace", "Direct beach access"]
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "status": "Rent",
       "area": 15000,
       "location": "Bora Bora, French Polynesia",
-      "facilities": ["Spa & wellness center", "Infinity pool", "Gourmet restaurants", "Water sports", "Island excursions"]
+      "facilities": ["Spa & wellness center", "Infinity pool", "Water sports"]
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "status": "Sale",
       "area": 4000,
       "location": "Santorini, Greece",
-      "facilities": ["Private infinity pool", "Spacious terrace", "Gourmet kitchen", "Master suite with balcony"]
+      "facilities": ["Private infinity pool", "Gourmet kitchen", "Master suite with balcony"]
     }
   ]
   
