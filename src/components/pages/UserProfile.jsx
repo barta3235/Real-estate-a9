@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import wave from '../../assets/images/wave2.svg'
+import { ToastContainer } from "react-toastify";
 const UserProfile = () => {
 
     const {user}=useContext(AuthContext);
@@ -23,6 +24,7 @@ const UserProfile = () => {
                     </div>
                 </form>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

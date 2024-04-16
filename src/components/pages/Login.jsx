@@ -39,6 +39,7 @@ const Login = () => {
         })
         .catch((error)=>{
             console.log(error.message);
+            toast(`${error.message}`);
         })
     }
 
@@ -48,9 +49,11 @@ const Login = () => {
         .then((result)=>{
             console.log(result.user);
             navigate(location.state ? location.state : '/')
+            
         })
         .catch((error)=>{
             console.log(error.message);
+            toast(`${error.message}`);
         })
     }
 
@@ -60,9 +63,12 @@ const Login = () => {
          .then((result)=>{
             console.log(result.user);
             navigate(location.state ? location.state : '/')
+            toast('You have logged in!');
+
         })
         .catch((error)=>{
             console.log(error.message);
+            toast(`${error.message}`);
         })
     }
 
@@ -115,15 +121,15 @@ const Login = () => {
                                        
                     <div className="flex items-center justify-end gap-3 flex-row mb-4 md:mb-0">
                         <h1 className="font-semibold text-[16px] ml-2">Continue with</h1>
-                        <button onClick={handleGoogleSignIn} className="animate__headShake flex items-center gap-[8px] btn md:my-3 md:ml-1"><h1 className="hidden md:flex">Google</h1> <FaGoogle className="text-[18px] text-red-800"></FaGoogle></button>
-                        <button onClick={handleGithub} className="animate__headShake flex items-center gap-[8px] btn md:my-3 md:mr-3"><h1 className="hidden md:flex">Github</h1> <FaGithub className="text-black text-[18px]"></FaGithub></button>
+                        <button onClick={handleGoogleSignIn} className="animate__headShake animate__animated flex items-center gap-[8px] btn md:my-3 md:ml-1"><h1 className="hidden md:flex">Google</h1> <FaGoogle className="text-[18px] text-red-800"></FaGoogle></button>
+                        <button onClick={handleGithub} className="animate__headShake animate__animated flex items-center gap-[8px] btn md:my-3 md:mr-3"><h1 className="hidden md:flex">Github</h1> <FaGithub className="text-black text-[18px]"></FaGithub></button>
                     </div>
 
 
                 </div>
     
             </div>
-            <ToastContainer />
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

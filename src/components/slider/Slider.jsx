@@ -24,7 +24,7 @@ const Slider = () => {
 
 
     return (
-        <div className='bg-red-700 h-[600px] rounded-2xl mb-[40px] animate__slideInDown animate__animated'>
+        <div className='bg-red-700 h-[600px] rounded-2xl mb-[20px] animate__slideInDown animate__animated'>
             <Swiper
                 direction={'vertical'}
                 slidesPerView={1}

@@ -9,6 +9,7 @@ import { IoEye } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
 import 'animate.css';
 import wave from '../../assets/images/wave1.svg'
+import { useNavigate } from "react-router-dom";
 
 
 const Register = () => {
@@ -16,6 +17,7 @@ const Register = () => {
     const [seePassword,setSeePassword]=useState(false)
     const { createUser,reworkProfile } = useContext(AuthContext);
 
+    const navigation= useNavigate();
     const {
         register,
         handleSubmit,
@@ -27,8 +29,10 @@ const Register = () => {
         
         if(password.length<6){
             toast('Password should be of at least 6 characters');
+            return
         }else if(!/^(?=.*[A-Z])(?=.*[a-z]).+$/.test(password)){
             toast('Password should have at least one Uppercase and one lowercase letter');
+            return
         }
 
         console.log(email,password);
@@ -39,7 +43,7 @@ const Register = () => {
               
             reworkProfile(name,photoUrl)
             .then((result)=>{
-                toast('You have successfully registered!');
+                navigation('/');
                 console.log(result.user)
             })
             .catch((error)=>{
@@ -48,9 +52,10 @@ const Register = () => {
             
         })
         .catch((error)=>{
-            toast(`${error.message}`);
-            console.log(error.message)
+            console.log(error.message);
+            toast(`${error.message}`)
         })
+        
     }
 
 
@@ -115,14 +120,14 @@ const Register = () => {
                             <Link className="font-semibold" to='/login'>Already have an account ? <span className="text-red-700">Login here!</span></Link>
                         </div>
 
-                        <div className="form-control mt-6 animate__headShake">
+                        <div className="form-control mt-6 animate__headShake animate__animated">
                             <button className="btn bg-red-700 text-white hover:bg-red-900">Register</button>
                         </div>
                     </form>
                 </div>
     
             </div>
-            <ToastContainer />
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

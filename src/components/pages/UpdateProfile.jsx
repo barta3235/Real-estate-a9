@@ -1,7 +1,7 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from "react-hook-form"
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import wave2 from '../../assets/images/wave2.svg'
@@ -9,6 +9,7 @@ import wave2 from '../../assets/images/wave2.svg'
 const UpdateProfile = () => {
 
     const {user,reworkProfile}=useContext(AuthContext);
+
 
     const {
         register,
