@@ -10,6 +10,7 @@ import UserProfile from "../components/pages/UserProfile";
 import UpdateProfile from "../components/pages/UpdateProfile";
 import ErrorPage from "../components/pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import GetInTouch from "../components/pages/GetInTouch";
 
 
 const Router = createBrowserRouter([
@@ -45,6 +46,10 @@ const Router = createBrowserRouter([
           path: '/updateprofile',
           element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
         },
+        {
+          path: '/getintouch',
+          element: <PrivateRoute><GetInTouch></GetInTouch></PrivateRoute>
+        }
     ]
   },
 ]);

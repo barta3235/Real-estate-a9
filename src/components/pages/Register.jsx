@@ -17,10 +17,10 @@ const Register = () => {
     const [seePassword,setSeePassword]=useState(false)
     const { createUser,reworkProfile } = useContext(AuthContext);
 
-    const navigation= useNavigate();
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
 
@@ -43,7 +43,8 @@ const Register = () => {
               
             reworkProfile(name,photoUrl)
             .then((result)=>{
-                navigation('/');
+                toast('You have successfully registered')
+                reset({name:'',email:'',photoUrl:'',password:''})
                 console.log(result.user)
             })
             .catch((error)=>{
@@ -127,7 +128,12 @@ const Register = () => {
                 </div>
     
             </div>
-            <ToastContainer></ToastContainer>
+            <ToastContainer
+            position="top-center"
+            toastStyle={{ borderRadius: '10px',background:'#742A2A',color:'white',fontSize:'18px',fontWeight:'bold' }}
+            progressStyle={{background:'white'}}
+            closeOnClick={true}></ToastContainer>
+
         </div>
     );
 };

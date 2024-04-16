@@ -12,9 +12,10 @@ const img="https://i.ibb.co/X7K2KK0/sss.jpg";
 const Navbar = () => {
 
     const navlinks = <div>
-        <NavLink to='/' className={({isActive})=> isActive? 'text-[19px] mr-5 font-semibold border border-red-700 text-red-700 rounded-2xl p-3': 'text-[19px] mr-5 font-semibold rounded-2xl p-3'}>Home</NavLink>
-        <NavLink to='/updateProfile' className={({isActive})=> isActive? 'text-[19px] mr-5 font-semibold border border-red-700 text-red-700 rounded-2xl p-3': 'text-[19px] mr-5 font-semibold rounded-2xl p-3'}>Update Profile</NavLink>
-        <NavLink to='/userProfile' className={({isActive})=> isActive? 'text-[19px] font-semibold border border-red-700 text-red-700 rounded-2xl p-3': 'text-[19px] font-semibold rounded-2xl p-3'}>User Profile</NavLink>
+        <NavLink to='/' className={({isActive})=> isActive? 'text-[19px] mr-5 font-bold border-red-700 text-red-700 rounded-2xl p-3 border-2': 'text-[19px] mr-5 font-semibold rounded-2xl p-3'}>Home</NavLink>
+        <NavLink to='/updateProfile' className={({isActive})=> isActive? 'text-[19px] mr-5 font-bold border-2 border-red-700 text-red-700 rounded-2xl p-3': 'text-[19px] mr-5 font-semibold rounded-2xl p-3'}>Update Profile</NavLink>
+        <NavLink to='/userProfile' className={({isActive})=> isActive? 'text-[19px] mr-5 font-bold border-2 border-red-700 text-red-700 rounded-2xl p-3': 'text-[19px] mr-5 font-semibold rounded-2xl p-3'}>User Profile</NavLink>
+        <NavLink to='/getintouch' className={({isActive})=> isActive? 'text-[19px] font-bold border-2 border-red-700 text-red-700 rounded-2xl p-3': 'text-[19px] font-semibold rounded-2xl p-3'}>Connect Now</NavLink>
     </div>
 
     const {user,logOut}=useContext(AuthContext);
@@ -43,6 +44,7 @@ const Navbar = () => {
                         <Link className="text-[18px] font-semibold py-[8px] pl-[7px] border-b rounded-lg" to='/register'>Sign Up</Link>
                         <Link className="text-[18px] font-semibold py-[8px] pl-[7px] border-b rounded-lg" to='/userprofile'>User Profile</Link>
                         <Link className="text-[18px] font-semibold py-[8px] pl-[7px] border-b rounded-lg" to='/updateprofile'>Update Profile</Link>
+                        <Link className="text-[18px] font-semibold py-[8px] pl-[7px] border-b rounded-lg" to='/getintouch'>Connect Now</Link>
                         {
                             user && <Link className="text-[18px] font-semibold py-[8px] pl-[7px] border-b rounded-lg" onClick={handleSignOut}>Logout</Link>
                         }

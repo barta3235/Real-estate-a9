@@ -74,7 +74,11 @@ const UpdateProfile = () => {
                 </div>
 
             </div>
-            <ToastContainer />
+            <ToastContainer
+            position="top-center"
+            toastStyle={{ borderRadius: '10px',background:'#742A2A',color:'white',fontSize:'18px',fontWeight:'bold' }}
+            progressStyle={{background:'white'}}
+            closeOnClick={true}></ToastContainer>
         </div>
     );
 };
