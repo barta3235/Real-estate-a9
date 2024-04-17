@@ -17,7 +17,7 @@ const EstateDetails = ({estate}) => {
                 <h1><strong>Area: </strong> {area} sq/ft</h1>
             </div>
             <div className="animate__rollOut">
-            <Link className="bg-gradient-to-r from-red-600 to-red-800 mt-[20px] py-3 pr-5 flex justify-end text-white rounded-lg" to={`/moreOnEstate/${id}`}>View Details</Link>
+            <Link className="bg-gradient-to-r from-red-600 to-red-800 mt-[20px] py-3 pr-5 flex justify-end text-white rounded-lg" to={`/moreOnEstate/${id}`}>View Property</Link>
             </div>
         </div>
     );
