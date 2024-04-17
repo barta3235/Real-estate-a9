@@ -43,7 +43,7 @@ const UpdateProfile = () => {
             <Helmet>
                  <title>South Stay | Update Profile</title>
             </Helmet>
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:flex-row-reverse p-0 m-0">
                 <div className="text-center lg:text-left animate__rotateInDownLeft animate__animated">
                     <h1 className="text-5xl font-bold text-red-800">Update your information!</h1>
                     <p className="py-6 text-[18px] font-medium">We're here to assist you by keeping our information up to date, ensuring your convenience is our top priority. In return, we appreciate your help by providing the latest listings for both houses on sale and for rent.</p>

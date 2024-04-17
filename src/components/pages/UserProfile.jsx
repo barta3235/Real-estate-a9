@@ -20,9 +20,10 @@ const UserProfile = () => {
                 <form className="md:ml-[30px] animate__zoomInDown animate__animated">
                     <h1 className="text-3xl md:text-5xl font-bold ">Hello, <span className="text-red-700">{displayName}</span></h1>
                     <p className="text-[20px] font-medium mb-7"></p>
-                    <div className="border p-2 rounded-xl bg-gradient-to-r from-red-800 to-red-500 text-white">
+                    <div className="border p-2 rounded-xl bg-gradient-to-r from-red-800 to-red-500 text-white w-full">
                       <h1 className=" font-medium text-[16px] md:text-[20px]"><span className="font-bold">User name: </span>{displayName}</h1>
                       <h1 className="mt-5 font-medium text-[16px] md:text-[20px]"><span className="font-bold">Email: </span>{email}</h1>
+                      <h1 className="mt-5 font-medium text-[16px] md:text-[20px] w-[200px]"><span className="font-bold">PhotoURL: </span><span className="whitespace-normal break-words">{photoURL}</span></h1>
                     </div>
                 </form>
             </div>

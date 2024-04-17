@@ -116,8 +116,8 @@ const Login = () => {
             </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse p-0">
                 <div className="text-center lg:text-left animate__animated animate__fadeInRightBig">
-                    <h1 className="text-5xl font-bold text-red-800">Log In!</h1>
-                    <p className="py-6 text-[18px] font-medium">Now you shall have access to all the marvels of luxury architecture with just a click.</p>
+                    <h1 className="text-4xl md:text-5xl font-bold text-red-800">Log In!</h1>
+                    <p className="py-6 text-[13px] md:text-[18px] font-medium">Now you shall have access to all the marvels of luxury architecture with just a click.</p>
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 animate__animated animate__fadeInLeftBig">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body p-3 md:p-[32px]">
