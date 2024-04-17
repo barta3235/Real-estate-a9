@@ -14,7 +14,7 @@ const UserProfile = () => {
     return (
         <div className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(https://i.ibb.co/sPKRN0g/wave2.png)`}}>
             <Helmet>
-                 <title>South Stay | Home</title>
+                 <title>South Stay | User Profile</title>
             </Helmet>
             <div className="hero-content flex-col md:flex-row p-0">
                 <img src={photoURL} className="animate__zoomInUp animate__animated md:w-[300px] rounded-full shadow-2xl mb-[20px] md:mb-[20px]" />
