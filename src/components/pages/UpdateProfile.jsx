@@ -1,10 +1,10 @@
-import {  toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 import { useForm } from "react-hook-form"
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import wave2 from '../../assets/images/wave2.svg'
+import Swal from 'sweetalert2'
 
 const UpdateProfile = () => {
 
@@ -24,7 +24,12 @@ const UpdateProfile = () => {
 
         reworkProfile(name,photoURL)
         .then((result)=>{
-            toast.success('Please Reload your webpage!')
+            Swal.fire({
+                title: 'Success!',
+                text: 'Please reload the webpage',
+                icon: 'success',
+                confirmButtonText: 'Continue'
+              })
             console.log(result.user)
         })
         .catch((error)=>{

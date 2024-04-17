@@ -1,23 +1,22 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom";
-import {  toast } from 'react-toastify';
+import { Link, useNavigate } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
 import 'animate.css';
 import wave from '../../assets/images/wave1.svg'
-import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 
 const Register = () => {
 
     const [seePassword,setSeePassword]=useState(false)
-    const { createUser,reworkProfile,logOut } = useContext(AuthContext);
+    const { createUser,reworkProfile } = useContext(AuthContext);
 
-    const navigation=useNavigate();
+    const navigation= useNavigate();
     const {
         register,
         handleSubmit,
@@ -29,10 +28,20 @@ const Register = () => {
         const {email,password,name,photoUrl}=data;
         
         if(password.length<6){
-            toast('Password should be of at least 6 characters');
+            Swal.fire({
+                title: 'Error!',
+                text:  `Password should be of at least 6 characters`,
+                icon: 'error',
+                confirmButtonText: 'Continue'
+              })
             return
         }else if(!/^(?=.*[A-Z])(?=.*[a-z]).+$/.test(password)){
-            toast('Password should have at least one Uppercase and one lowercase letter');
+            Swal.fire({
+                title: 'Error!',
+                text:  `Password should have at least one Uppercase and one lowercase letter`,
+                icon: 'error',
+                confirmButtonText: 'Continue'
+              })
             return
         }
 
@@ -42,20 +51,38 @@ const Register = () => {
         .then((result)=>{
             console.log(result.user)
               
-            reworkProfile(name,photoUrl)
+            if(result.user){
+                reworkProfile(name,photoUrl)
             .then(()=>{
-                toast.success('You have successfully registered')
-                logOut();
-                navigation('/login');
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'You have registered successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Continue'
+                  })
+                reset({email:'',password:'',name:'',photoUrl:''})
+                navigation('/')
             })
             .catch((error)=>{
                 console.log(error.message);
+                Swal.fire({
+                    title: 'Error!',
+                    text:  `${error.message}`,
+                    icon: 'error',
+                    confirmButtonText: 'Continue'
+                  })
             })
+            }
             
         })
         .catch((error)=>{
             console.log(error.message);
-            toast.error(`${error.message}`)
+            Swal.fire({
+                title: 'Error!',
+                text:  `${error.message}`,
+                icon: 'error',
+                confirmButtonText: 'Continue'
+              })
         })
         
     }

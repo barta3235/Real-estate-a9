@@ -4,7 +4,7 @@ import {updateProfile, signOut,createUserWithEmailAndPassword, signInWithEmailAn
 import { GoogleAuthProvider,signInWithPopup } from "firebase/auth";
 import { GithubAuthProvider } from "firebase/auth";
 
-export const AuthContext= createContext('AUTH');
+export const AuthContext= createContext();
 export const provider = new GoogleAuthProvider();
 const gitProvider = new GithubAuthProvider();
 
@@ -51,11 +51,15 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
        const unSubscribe= onAuthStateChanged(auth, (currentUser)=>{
-           SetUser(currentUser);
+           if(currentUser){
+              SetUser(currentUser);
+           }else{
+              SetUser(null);
+           }
            setLoading(false);
        })
        return () =>{
-         unSubscribe();
+         return unSubscribe();
        }
     },[])
 

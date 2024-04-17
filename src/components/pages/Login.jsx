@@ -2,8 +2,6 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useForm } from "react-hook-form"
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
 import { useState } from "react";
@@ -12,6 +10,7 @@ import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import 'animate.css';
 import wave from '../../assets/images/wave1.svg'
+import Swal from 'sweetalert2'
 
 
 
@@ -34,13 +33,32 @@ const Login = () => {
          
         signInUser(email,password)
         .then((result)=>{
+           if(location.state){
             console.log(result.user);
-            toast.success('You have logged in');
+            Swal.fire({
+                title: 'Success!',
+                text: 'You have Logged in',
+                icon: 'success',
+                confirmButtonText: 'Continue'
+              })
             navigate(location.state ? location.state : '/')
+           }else{
+            Swal.fire({
+                title: 'Success!',
+                text: 'You have Logged in',
+                icon: 'success',
+                confirmButtonText: 'Continue'
+              })
+           }
         })
         .catch((error)=>{
             console.log(error.message);
-            toast.error(`${error.message}`);
+            Swal.fire({
+                title: 'Error!',
+                text: `${error.message}`,
+                icon: 'error',
+                confirmButtonText: 'Continue'
+              })
         })
     }
 
@@ -49,13 +67,23 @@ const Login = () => {
         googleAuth()
         .then((result)=>{
             console.log(result.user);
-            toast.success('You have logged in')
+            Swal.fire({
+                title: 'Success!',
+                text: 'You have Logged in',
+                icon: 'success',
+                confirmButtonText: 'Continue'
+              })
             navigate(location.state ? location.state : '/')
             
         })
         .catch((error)=>{
             console.log(error.message);
-            toast.error(`${error.message}`);
+            Swal.fire({
+                title: 'Error!',
+                text: `${error.message}`,
+                icon: 'error',
+                confirmButtonText: 'Continue'
+              })
         })
     }
 
@@ -64,12 +92,22 @@ const Login = () => {
          githubLogin()
          .then((result)=>{
             console.log(result.user);
-            toast.success('You have logged in')
+            Swal.fire({
+                title: 'Success!',
+                text: 'You have Logged in',
+                icon: 'success',
+                confirmButtonText: 'Continue'
+              })
             navigate(location.state ? location.state : '/')
         })
         .catch((error)=>{
             console.log(error.message);
-            toast.error(`${error.message}`);
+            Swal.fire({
+                title: 'Success!',
+                text: 'You have Logged in',
+                icon: 'success',
+                confirmButtonText: 'Continue'
+              })
         })
     }
 
