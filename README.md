@@ -18,5 +18,15 @@ This is a website for a real estate company named South Stay that deals with lux
 - Dynamic title for each individual pages
 
 # Packages used:
+- React hook form, for login,sign up and other forms | https://react-hook-form.com/get-started
+- Animate.CSS ,for animation | https://animate.style/
+- Swiper Slider, for slider in the homepage | https://swiperjs.com/
+- Daisy UI, for components | https://daisyui.com/components/carousel/
+- React Router, for routing | https://reactrouter.com/en/main
+- Sweetalert2 , for sweet alerts | https://sweetalert2.github.io/#download
+
+# Svg/png used from:
+- https://bgjar.com/
+
 
 
