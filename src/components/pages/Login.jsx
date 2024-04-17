@@ -37,7 +37,8 @@ const Login = () => {
                 title: 'Success!',
                 text: 'You have Logged in',
                 icon: 'success',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
             navigate(location.state ? location.state : '/')
           
@@ -48,7 +49,8 @@ const Login = () => {
                 title: 'Error!',
                 text: `${error.message}`,
                 icon: 'error',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
         })
     }
@@ -62,7 +64,8 @@ const Login = () => {
                 title: 'Success!',
                 text: 'You have Logged in',
                 icon: 'success',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
             navigate(location.state ? location.state : '/')
             
@@ -73,7 +76,8 @@ const Login = () => {
                 title: 'Error!',
                 text: `${error.message}`,
                 icon: 'error',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
         })
     }
@@ -87,7 +91,8 @@ const Login = () => {
                 title: 'Success!',
                 text: 'You have Logged in',
                 icon: 'success',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
             navigate(location.state ? location.state : '/')
         })
@@ -97,7 +102,8 @@ const Login = () => {
                 title: 'Success!',
                 text: 'You have Logged in',
                 icon: 'success',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
         })
     }

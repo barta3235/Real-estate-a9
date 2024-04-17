@@ -27,7 +27,8 @@ const UpdateProfile = () => {
                 title: 'Success!',
                 text: 'Please reload the webpage',
                 icon: 'success',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
             console.log(result.user)
         })

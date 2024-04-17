@@ -33,7 +33,8 @@ const Register = () => {
                 title: 'Error!',
                 text:  `Password should be of at least 6 characters`,
                 icon: 'error',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
             return
         }else if(!/^(?=.*[A-Z])(?=.*[a-z]).+$/.test(password)){
@@ -41,7 +42,8 @@ const Register = () => {
                 title: 'Error!',
                 text:  `Password should have at least one Uppercase and one lowercase letter`,
                 icon: 'error',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
             return
         }
@@ -59,7 +61,8 @@ const Register = () => {
                     title: 'Success!',
                     text: 'You have registered successfully',
                     icon: 'success',
-                    confirmButtonText: 'Continue'
+                    confirmButtonText: 'Continue',
+                    confirmButtonColor: '#8b0000'
                   })
                 reset({email:'',password:'',name:'',photoUrl:''})
                 navigation('/')
@@ -70,7 +73,8 @@ const Register = () => {
                     title: 'Error!',
                     text:  `${error.message}`,
                     icon: 'error',
-                    confirmButtonText: 'Continue'
+                    confirmButtonText: 'Continue',
+                    confirmButtonColor: '#8b0000'
                   })
             })
             }
@@ -82,7 +86,8 @@ const Register = () => {
                 title: 'Error!',
                 text:  `${error.message}`,
                 icon: 'error',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#8b0000'
               })
         })
         

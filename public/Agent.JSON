@@ -1,59 +1,90 @@
 [
-    {
-      "agent_id": "A001",
-      "agent_photo": "https://i.ibb.co/JkWhnnt/g1.jpg",
-      "agent_rating": 4.8,
-      "agent_experience": "7 years of experience in the real estate industry",
-      "agent_designation": "Senior Sales Associate"
-    },
-    {
-      "agent_id": "A002",
-      "agent_photo": "https://i.ibb.co/BG8n1vB/g2.jpg",
-      "agent_rating": 4.5,
-      "agent_experience": "5 years of experience in property management",
-      "agent_designation": "Property Manager"
-    },
-    {
-      "agent_id": "A003",
-      "agent_photo": "https://i.ibb.co/zGcttyc/g3.jpg",
-      "agent_rating": 4.9,
-      "agent_experience": "More than 10 years of extensive experience as a real estate broker",
-      "agent_designation": "Real Estate Broker"
-    },
-    {
-      "agent_id": "A004",
-      "agent_photo": "https://i.ibb.co/cCX6vdk/g5.png",
-      "agent_rating": 4.7,
-      "agent_experience": "8 years of experience specializing in listing properties",
-      "agent_designation": "Listing Agent"
-    },
-    {
-      "agent_id": "A005",
-      "agent_photo": "https://i.ibb.co/QX41tSK/g6.jpg",
-      "agent_rating": 4.6,
-      "agent_experience": "6 years of experience serving as a dedicated Buyer's Agent",
-      "agent_designation": "Buyer's Agent"
-    },
-    {
-      "agent_id": "A006",
-      "agent_photo": "https://i.ibb.co/FV11bMr/g7.jpg",
-      "agent_rating": 4.8,
-      "agent_experience": "More than 9 years of experience in property appraisal and valuation",
-      "agent_designation": "Property Appraiser"
-    },
-    {
-      "agent_id": "A007",
-      "agent_photo": "https://i.ibb.co/1QhDn6d/g8.jpg",
-      "agent_rating": 4.6,
-      "agent_experience": "4 years of experience specializing in commercial real estate",
-      "agent_designation": "Commercial Property Agent"
-    },
-    {
-      "agent_id": "A008",
-      "agent_photo": "https://i.ibb.co/FV11bMr/g7.jpg",
-      "agent_rating": 4.9,
-      "agent_experience": "More than 12 years of experience in luxury residential property sales",
-      "agent_designation": "Luxury Real Estate Specialist"
-    }
-  ]
-  
+  {
+    "agent_id": "A001",
+    "agent_name": "John Doe",
+    "agent_email": "john.doe@southstay.in",
+    "agent_photo": "https://i.ibb.co/JkWhnnt/g1.jpg",
+    "agent_rating": 4.8,
+    "agent_experience": "7 years of experience in the real estate industry",
+    "agent_designation": "Senior Sales Associate",
+    "contact": "01711588688",
+    "office_number": "555-1234"
+  },
+  {
+    "agent_id": "A002",
+    "agent_name": "Jane Smith",
+    "agent_email": "jane.smith@southstay.in",
+    "agent_photo": "https://i.ibb.co/BG8n1vB/g2.jpg",
+    "agent_rating": 4.5,
+    "agent_experience": "5 years of experience in property management",
+    "agent_designation": "Property Manager",
+    "contact": "017115446416",
+    "office_number": "555-1235"
+  },
+  {
+    "agent_id": "A003",
+    "agent_name": "Michael Johnson",
+    "agent_email": "michael.johnson@southstay.in",
+    "agent_photo": "https://i.ibb.co/zGcttyc/g3.jpg",
+    "agent_rating": 4.9,
+    "agent_experience": "More than 10 years of extensive experience as a real estate broker",
+    "agent_designation": "Real Estate Broker",
+    "contact": "01711544690",
+    "office_number": "555-1236"
+  },
+  {
+    "agent_id": "A004",
+    "agent_name": "Emily Brown",
+    "agent_email": "emily.brown@southstay.in",
+    "agent_photo": "https://i.ibb.co/cCX6vdk/g5.png",
+    "agent_rating": 4.7,
+    "agent_experience": "8 years of experience specializing in listing properties",
+    "agent_designation": "Listing Agent",
+    "contact": "01711544699",
+    "office_number": "555-1237"
+  },
+  {
+    "agent_id": "A005",
+    "agent_name": "David Wilson",
+    "agent_email": "david.wilson@southstay.in",
+    "agent_photo": "https://i.ibb.co/QX41tSK/g6.jpg",
+    "agent_rating": 4.6,
+    "agent_experience": "6 years of experience serving as a dedicated Buyer's Agent",
+    "agent_designation": "Buyer's Agent",
+    "contact": "01711544644",
+    "office_number": "555-1238"
+  },
+  {
+    "agent_id": "A006",
+    "agent_name": "Sarah Martinez",
+    "agent_email": "sarah.martinez@southstay.in",
+    "agent_photo": "https://i.ibb.co/FV11bMr/g7.jpg",
+    "agent_rating": 4.8,
+    "agent_experience": "More than 9 years of experience in property appraisal and valuation",
+    "agent_designation": "Property Appraiser",
+    "contact": "01711544622",
+    "office_number": "555-1231"
+  },
+  {
+    "agent_id": "A007",
+    "agent_name": "Christopher Lee",
+    "agent_email": "christopher.lee@southstay.in",
+    "agent_photo": "https://i.ibb.co/1QhDn6d/g8.jpg",
+    "agent_rating": 4.6,
+    "agent_experience": "4 years of experience specializing in commercial real estate",
+    "agent_designation": "Commercial Property Agent",
+    "contact": "01711544666",
+    "office_number": "555-1232"
+  },
+  {
+    "agent_id": "A008",
+    "agent_name": "Olivia Taylor",
+    "agent_email": "olivia.taylor@southstay.in",
+    "agent_photo": "https://i.ibb.co/FV11bMr/g7.jpg",
+    "agent_rating": 4.9,
+    "agent_experience": "More than 12 years of experience in luxury residential property sales",
+    "agent_designation": "Luxury Real Estate Specialist",
+    "contact": "01711544688",
+    "office_number": "555-1245"
+  }
+]

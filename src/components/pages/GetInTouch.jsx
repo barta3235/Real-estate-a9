@@ -15,7 +15,7 @@ const GetInTouch = () => {
                  <title>South Stay | Agents & Info</title>
             </Helmet>
             <EstateIntro3></EstateIntro3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-3 mb-[40px] animate__slideInUp animate__animated">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 mb-[40px] animate__slideInUp animate__animated">
                 {
                     agentsData.map((agentData, idx) => <GetMoreInTouch key={idx} agentData={agentData}></GetMoreInTouch>)
                 }
