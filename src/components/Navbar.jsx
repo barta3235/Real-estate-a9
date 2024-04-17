@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { FaHouseCrack } from "react-icons/fa6";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import 'animate.css'
 
 const img="https://i.ibb.co/X7K2KK0/sss.jpg";
@@ -70,7 +68,6 @@ const Navbar = () => {
                     : <Link to='/login' className="btn text-[19px] hidden md:flex hover:bg-red-700 hover:text-white animate__animated animate__bounceIn">Login</Link>
                 }
             </div>
-            <ToastContainer />
         </div>
     );
 };
