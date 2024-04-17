@@ -1,8 +1,22 @@
-# React + Vite
+# South Stay
+This is a website for a real estate company named South Stay that deals with luxury segment apartments, penthouses, mansions, villas, private islands, etc.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Link link: https://m9-a9-realestate.web.app/
 
-Currently, two official plugins are available:
+# Features and characteristics:
+- Users can create accounts with email and password or use existing Google and Github credentials for a streamlined experience.
+- Login required for full access, certain functionalities are restricted to registered or logged in users. These functionalities include:
+       - Viewing detailed property information
+       - Contacting agents or accessing the contact portal
+       - Viewing user profile and updating user name and or photo URL.
+- In User profile, logged-in users can access their profile information
+- Users can edit their profile information, including name and photo URL in the update profile section.
+- Users can browse through various property listings with clear descriptions and visuals, once logged in or after registering themselves.
+- Unregistered users can see basic property information, but detailed descriptions are restricted, motivating registration.
+- The homepage is visually appealing and adapt seamlessly to different screen sizes (desktop, mobile, tablet) for optimal user experience.
+- A dedicated FAQ section on the homepage can inform users about the company, its services, and the benefits of using the platform.
+- Dynamic title for each individual pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Packages used:
+
+
