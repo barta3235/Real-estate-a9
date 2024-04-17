@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { AuthContext, provider } from "../../provider/AuthProvider";
+import { AuthContext } from "../../provider/AuthProvider";
 import { useForm } from "react-hook-form"
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
@@ -35,11 +35,12 @@ const Login = () => {
         signInUser(email,password)
         .then((result)=>{
             console.log(result.user);
+            toast.success('You have logged in');
             navigate(location.state ? location.state : '/')
         })
         .catch((error)=>{
             console.log(error.message);
-            toast(`${error.message}`);
+            toast.error(`${error.message}`);
         })
     }
 
@@ -48,12 +49,13 @@ const Login = () => {
         googleAuth()
         .then((result)=>{
             console.log(result.user);
+            toast.success('You have logged in')
             navigate(location.state ? location.state : '/')
             
         })
         .catch((error)=>{
             console.log(error.message);
-            toast(`${error.message}`);
+            toast.error(`${error.message}`);
         })
     }
 
@@ -62,13 +64,12 @@ const Login = () => {
          githubLogin()
          .then((result)=>{
             console.log(result.user);
+            toast.success('You have logged in')
             navigate(location.state ? location.state : '/')
-            toast('You have logged in!');
-
         })
         .catch((error)=>{
             console.log(error.message);
-            toast(`${error.message}`);
+            toast.error(`${error.message}`);
         })
     }
 
@@ -129,11 +130,6 @@ const Login = () => {
                 </div>
     
             </div>
-            <ToastContainer
-            position="top-center"
-            toastStyle={{ borderRadius: '10px',background:'#742A2A',color:'white',fontSize:'18px',fontWeight:'bold' }}
-            progressStyle={{background:'white'}}
-            closeOnClick={true}></ToastContainer>
         </div>
     );
 };

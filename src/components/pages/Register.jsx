@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useForm } from "react-hook-form"
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
@@ -15,8 +15,9 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
 
     const [seePassword,setSeePassword]=useState(false)
-    const { createUser,reworkProfile } = useContext(AuthContext);
+    const { createUser,reworkProfile,logOut } = useContext(AuthContext);
 
+    const navigation=useNavigate();
     const {
         register,
         handleSubmit,
@@ -42,10 +43,10 @@ const Register = () => {
             console.log(result.user)
               
             reworkProfile(name,photoUrl)
-            .then((result)=>{
-                toast('You have successfully registered')
-                reset({name:'',email:'',photoUrl:'',password:''})
-                console.log(result.user)
+            .then(()=>{
+                toast.success('You have successfully registered')
+                logOut();
+                navigation('/login');
             })
             .catch((error)=>{
                 console.log(error.message);
@@ -54,7 +55,7 @@ const Register = () => {
         })
         .catch((error)=>{
             console.log(error.message);
-            toast(`${error.message}`)
+            toast.error(`${error.message}`)
         })
         
     }
@@ -128,11 +129,6 @@ const Register = () => {
                 </div>
     
             </div>
-            <ToastContainer
-            position="top-center"
-            toastStyle={{ borderRadius: '10px',background:'#742A2A',color:'white',fontSize:'18px',fontWeight:'bold' }}
-            progressStyle={{background:'white'}}
-            closeOnClick={true}></ToastContainer>
 
         </div>
     );

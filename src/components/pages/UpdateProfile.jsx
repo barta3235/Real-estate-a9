@@ -1,7 +1,7 @@
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from "react-hook-form"
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import wave2 from '../../assets/images/wave2.svg'
@@ -24,7 +24,7 @@ const UpdateProfile = () => {
 
         reworkProfile(name,photoURL)
         .then((result)=>{
-            toast('Please Reload your webpage!')
+            toast.success('Please Reload your webpage!')
             console.log(result.user)
         })
         .catch((error)=>{
@@ -74,11 +74,7 @@ const UpdateProfile = () => {
                 </div>
 
             </div>
-            <ToastContainer
-            position="top-center"
-            toastStyle={{ borderRadius: '10px',background:'#742A2A',color:'white',fontSize:'18px',fontWeight:'bold' }}
-            progressStyle={{background:'white'}}
-            closeOnClick={true}></ToastContainer>
+            
         </div>
     );
 };
