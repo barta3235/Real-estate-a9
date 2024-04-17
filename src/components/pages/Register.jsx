@@ -93,7 +93,7 @@ const Register = () => {
             <Helmet>
                  <title>South Stay | Sign Up</title>
             </Helmet>
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:flex-row-reverse p-0">
                 <div className="text-center lg:text-left animate__animated animate__fadeInRightBig">
                     <h1 className="text-5xl font-bold text-red-800">Register yourself!</h1>
                     <p className="py-6 text-[18px] font-medium">Be a part of South Stay family. Your convenience is our concern</p>

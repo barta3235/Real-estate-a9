@@ -48,7 +48,8 @@ const Router = createBrowserRouter([
         },
         {
           path: '/getintouch',
-          element: <PrivateRoute><GetInTouch></GetInTouch></PrivateRoute>
+          element: <PrivateRoute><GetInTouch></GetInTouch></PrivateRoute>,
+          loader:()=>fetch('/Agent.JSON')
         }
     ]
   },

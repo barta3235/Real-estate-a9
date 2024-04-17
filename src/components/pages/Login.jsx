@@ -117,7 +117,7 @@ const Login = () => {
             <Helmet>
                  <title>South Stay | Login</title>
             </Helmet>
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:flex-row-reverse p-0">
                 <div className="text-center lg:text-left animate__animated animate__fadeInRightBig">
                     <h1 className="text-5xl font-bold text-red-800">Log In!</h1>
                     <p className="py-6 text-[18px] font-medium">Now you shall have access to all the marvels of luxury architecture with just a click.</p>
