@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form"
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
-import wave2 from '../../assets/images/wave2.svg'
 import Swal from 'sweetalert2'
 
 const UpdateProfile = () => {
@@ -39,7 +38,7 @@ const UpdateProfile = () => {
         
     }
     return (
-        <div className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(${wave2})`}}>
+        <div className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(https://i.ibb.co/sPKRN0g/wave2.png)`}}>
             <Helmet>
                  <title>South Stay | Update Profile</title>
             </Helmet>

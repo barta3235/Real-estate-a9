@@ -1,15 +1,18 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
-import wave from '../../assets/images/wave2.svg'
 import { ToastContainer } from "react-toastify";
+
+
+// https://i.ibb.co/sPKRN0g/wave2.png
+
 const UserProfile = () => {
 
     const {user}=useContext(AuthContext);
     const {displayName,email,photoURL}=user
 
     return (
-        <div className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(${wave})`}}>
+        <div className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(https://i.ibb.co/sPKRN0g/wave2.png)`}}>
             <Helmet>
                  <title>South Stay | Home</title>
             </Helmet>

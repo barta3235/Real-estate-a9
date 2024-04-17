@@ -1,10 +1,9 @@
 import { FaStar } from "react-icons/fa";
-import wave from '../../assets/images/wave1.svg'
 
 const GetMoreInTouch = ({ agentData }) => {
     const { agent_id, agent_rating, agent_experience, agent_designation, agent_photo } = agentData
     return (
-            <div className="font-medium border p-[10px] md:p-[20px] rounded-xl md:mx-[4px]" style={{backgroundImage: `url(${wave})`}} >
+            <div className="font-medium border p-[10px] md:p-[20px] rounded-xl md:mx-[4px]" style={{backgroundImage: `url(https://i.ibb.co/KG3C1hn/wave1.png)`}} >
                 <img className="w-full h-[300px] rounded-xl" src={agent_photo} alt="" />
                 <h1 className="flex items-center gap-2 text-[20px] my-[10px]"><strong>Agent Id:</strong> {agent_id}</h1>
                 <h1 className="my-[10px] text-[20px]"><strong>Agent Designation: </strong> {agent_designation}</h1>

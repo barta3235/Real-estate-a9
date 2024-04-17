@@ -7,8 +7,9 @@ import { FaEyeSlash } from "react-icons/fa";
 import { IoEye } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
 import 'animate.css';
-import wave from '../../assets/images/wave1.svg'
 import Swal from 'sweetalert2'
+
+// https://i.ibb.co/KG3C1hn/wave1.png
 
 
 const Register = () => {
@@ -89,7 +90,7 @@ const Register = () => {
 
 
     return (
-        <div className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(${wave})`}}>
+        <div className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(https://i.ibb.co/KG3C1hn/wave1.png)`}}>
             <Helmet>
                  <title>South Stay | Sign Up</title>
             </Helmet>

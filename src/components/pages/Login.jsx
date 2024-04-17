@@ -9,10 +9,9 @@ import { Helmet } from "react-helmet-async";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import 'animate.css';
-import wave from '../../assets/images/wave1.svg'
 import Swal from 'sweetalert2'
 
-
+// wave 1 img link https://i.ibb.co/KG3C1hn/wave1.png
 
 const Login = () => {
     const {signInUser,googleAuth,githubLogin}=useContext(AuthContext);
@@ -33,7 +32,6 @@ const Login = () => {
          
         signInUser(email,password)
         .then((result)=>{
-           if(location.state){
             console.log(result.user);
             Swal.fire({
                 title: 'Success!',
@@ -42,14 +40,7 @@ const Login = () => {
                 confirmButtonText: 'Continue'
               })
             navigate(location.state ? location.state : '/')
-           }else{
-            Swal.fire({
-                title: 'Success!',
-                text: 'You have Logged in',
-                icon: 'success',
-                confirmButtonText: 'Continue'
-              })
-           }
+          
         })
         .catch((error)=>{
             console.log(error.message);
@@ -113,7 +104,7 @@ const Login = () => {
 
 
     return (
-        <div className="hero min-h-screen bg-slate-500" style={{backgroundImage: `url(${wave})`}} >
+        <div className="hero min-h-screen bg-slate-500" style={{backgroundImage: `url(https://i.ibb.co/KG3C1hn/wave1.png)`}} >
             <Helmet>
                  <title>South Stay | Login</title>
             </Helmet>
