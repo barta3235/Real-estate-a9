@@ -5,13 +5,12 @@ import { AuthContext } from '../../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2'
 import { IoMdPerson } from "react-icons/io";
-import { MdEmail } from "react-icons/md";
 import { IoMdPhotos } from "react-icons/io";
 
 const UpdateProfile = () => {
 
     const { user, reworkProfile } = useContext(AuthContext);
-    const {displayName,email,photoURL}=user
+    const {displayName,photoURL}=user
 
 
     const {
@@ -66,8 +65,9 @@ const UpdateProfile = () => {
                                 <span className="label-text font-medium">Name</span>
                             </label>
                             <input type="text" placeholder="Updated Name" className="input input-bordered"
-                                {...register("name")}
+                                {...register("name",{ required: true })}
                             />
+                             {errors.name && <span className="text-red-700 font-medium">*This field is required</span>}
                         </div>
 
                         <div className="form-control">
@@ -77,7 +77,7 @@ const UpdateProfile = () => {
                             <input type="text" placeholder="Updated Photo URL" className="input input-bordered"
                                 {...register("photoURL", { required: true })}
                             />
-                            {errors.password && <span className="text-red-700 font-medium">*This field is required</span>}
+                            {errors.photoURL && <span className="text-red-700 font-medium">*This field is required</span>}
                         </div>
 
 
